@@ -92,7 +92,7 @@ if($home_information["home_sec"]){
                 </h3>
             </div>
 
-            <p>Here is the paragraph</p>
+            <p>Committed to continuous learning, I am poised to contribute my skills and creativity to the world of technology.</p>
             <div class="info-box">
                 <div class="email-info">
                     <h5>Email:</h5>
@@ -100,8 +100,8 @@ if($home_information["home_sec"]){
                 </div>
             </div>
             <div class="btn-box">
-                <a href="#" class="btn">Download CV</a>
-                <a href="#" class="btn">Hire Me</a>                
+                <a href="MyCV.pdf" class="btn" download>Download CV</a>
+                <!-- <a href="#" class="btn">Hire Me</a>                 -->
             </div>
             <div class="icons">
                 <a href="https://www.facebook.com/ahsanul.haque.hasib.188">
@@ -244,22 +244,19 @@ if($about_information["about-sec"]){
 
     <section id="about" class="about">
         <div class="img-about">
-            <img src="Khabib.png" alt="">
+            <img src="Hasib.png" alt="">
             <div class="about-cont">
                 <span>Let me introduce myself</span>
                 <h2 class="tt">About Me</h2>
                 <p class="short-description">
-                    I am currently employed as an Assistant Professor in the Department of Computer Science and Engineering at <b>Khulna University of Engineering &amp; Technology, Bangladesh.</b> I pursued my Master’s degree in 2023, specializing in Medical Image Analysis, through an <a onclick="window.open('https://maiamaster.udg.edu/')" class="hyper__text">Erasmus Mundus Joint Master Degree Program</a> coordinated by the <b>University of Girona</b>, with funding provided by the European Union. I did my MSc thesis, titled <b>“Temporal Image Registration using deep learning for 3D Fetal Echocardiography,”</b> under the supervision of <a onclick="window.open('https://scholar.google.com/citations?hl=en&amp;user=TUa2r84AAAAJ&amp;view_op=list_works&amp;sortby=pubdate')" class="hyper__text">Dr. Choon Hwai Yap</a> at <b>Imperial College London</b>.</p><br>
+                Hello everyone,<br>My name is Ahsanul Haque Hasib, and I am thrilled to be part of the <b>Khulna University of Engineering & Technology</b> community. Currently pursuing my Computer Science degree here, I am passionate about Web Development, Machine Learning and am excited about the opportunities and challenges that university life has to offer.</p><br>
                 <p class="full-description">
                     
-                    I am currently employed as an Assistant Professor in the Department of Computer Science and Engineering at <b>Khulna University of Engineering &amp; Technology, Bangladesh.</b> I pursued my Master’s degree in 2023, specializing in Medical Image Analysis, through an <a onclick="window.open('https://maiamaster.udg.edu/')" class="hyper__text">Erasmus Mundus Joint Master Degree Program</a> coordinated by the <b>University of Girona</b>, with funding provided by the European Union. I did my MSc thesis, titled <b>“Temporal Image Registration using deep learning for 3D Fetal Echocardiography,”</b> under the supervision of <a onclick="window.open('https://scholar.google.com/citations?hl=en&amp;user=TUa2r84AAAAJ&amp;view_op=list_works&amp;sortby=pubdate')" class="hyper__text">Dr. Choon Hwai Yap</a> at <b>Imperial College London</b>.
+                Hello everyone,<br>My name is Ahsanul Haque Hasib, and I am thrilled to be part of the <b>Khulna University of Engineering & Technology</b> community. Currently pursuing my Computer Science degree here, I am passionate about Web Development, Machine Learning and am excited about the opportunities and challenges that university life has to offer.<br>
                     <br><br>
-                    Throughout my master's, I got the opportunity to undertake a summer internship at the research laboratory of <b>Institut Pascal</b> in France. During this internship, I focused on <b>'Diagnostic and therapeutic management of superficial tumors of the digestive tract assisted by artificial intelligence,'</b> under the guidance of <a onclick="window.open('https://scholar.google.com/citations?user=_KUZlKYAAAAJ&amp;hl=en')" class="hyper__text">Dr. Adrien Bartoli</a>. Additionally, I actively participated in the <b>16th EXCITE Zurich Summer School</b> on Biomedical Imaging with the participation grant, hosted by the <b>University and ETH Zurich</b>.
+                    Originally from Dhaka, I bring with me a lot of enthusiasm and perspectives. Throughout my academic journey, I have developed a keen interest in clubs and other co-curricular activities. These experiences have not only shaped my academic pursuits but have also allowed me to connect with like-minded individuals who share my enthusiasm for related fields.
                     <br><br>
-                    I graduated with a Bachelor's degree in Computer Science and Engineering from Khulna University of Engineering &amp; Technology in 2019, achieving first class first honors. My graduation thesis, titled <b>“Efficient Partitioning Algorithm for Parallel Multidimensional Matrix Operations by Linearization,”</b> was supervised by <a onclick="window.open('https://scholar.google.com/citations?user=U5DZvDEAAAAJ&amp;hl=en')" class="hyper__text">Dr. K. M. Azharul Hasan</a>.
-                    <br><br>
-                    My current research interests encompass <b>Medical Image Analysis</b> and <b>Artificial Intelligence</b>, with a focus on Deep Learning and its applications in the field of medicine and diagnosis. Find my complete <b>CV</b> <a class="hyper__text" onclick="window.open('./assets/CV_Kazi Saeed Alam (Long).pdf')">here...</a>
-                <br>
+                    One more thing about me is that I love animals. Before my arrival here in Khulna, I used to take part in activities regarding stray animal sheltering, rescuing and some other stuff. Now I intend to do the same with some of my batchmates, friends, seniors and anyone interested in doing so.<br>
                     <a href="#" id="read-less">Read Less</a>
                 </p>
                 <div class="btn-box">
@@ -672,17 +669,14 @@ if($hobby_information["hobbies-sec"]){
             <div class="topic-text">Send me a message</div>
 
             <?php
-// Check if the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the form data
+ 
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // Validate and sanitize the data (you should add more validation)
     
-
-    // Prepare and execute the SQL query to insert data into the table
     $sql = "INSERT INTO contact (name, email, msg) VALUES ('$name', '$email', '$message')";
 
     if ($dbcon->query($sql) === TRUE) {
@@ -691,7 +685,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     }
 
-    // Close the database connection
     $dbcon->close();
 }
 ?>

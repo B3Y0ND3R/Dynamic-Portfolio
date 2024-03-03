@@ -25,26 +25,26 @@ if (isset($_POST['update'])) {
         $pdes = mysqli_real_escape_string($dbcon, $_POST['pdes']);
         $gitlink = mysqli_real_escape_string($dbcon, $_POST['gitlink']);
 
-        // File upload handling (if necessary)
-        $targetDir = "images/";  // Adjust the target directory
+        
+        $targetDir = "images/";  
         $imageName = basename($_FILES["image"]["name"]);
         $targetFilePath = $targetDir . $imageName;
         $uploadOk = 1;
         $imageFileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
 
-        // Check if a file was selected for upload
+        
         if (!empty($_FILES["image"]["tmp_name"])) {
-            // You can add further validation and checks for file uploads
+            
             move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath);
             $updateImageQuery = "UPDATE project SET img='$imageName' WHERE id=$p_id";
             mysqli_query($dbcon, $updateImageQuery);
         }
 
-        // Update the project data in the database
+        
         $updateQuery = "UPDATE project SET title='$ptitle', description='$pdes', link='$gitlink' WHERE id=$p_id";
         mysqli_query($dbcon, $updateQuery);
 
-        // Redirect after processing
+        
         // header("Location: on.php?projectsetting=true");
         // exit();
     } else {

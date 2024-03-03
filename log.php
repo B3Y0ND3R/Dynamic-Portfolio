@@ -28,6 +28,7 @@ session_start();
       <div class="form-content">
 
 
+
         <?php
           if (isset($_POST['login'])) {
             $email = $_POST['email'];
@@ -40,6 +41,7 @@ session_start();
             if ($email === $user_data['email'] && $password === $user_data['password']) {
               $_SESSION['isUserLoggedIn'] = true;
               $_SESSION['emailId'] = $email;
+              $_SESSION['pswd'] = $password;
                 if (isset($_POST['remember'])) {
 
                   setcookie("email", $email, time() + (86400 * 30), "/");
@@ -64,7 +66,7 @@ session_start();
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" placeholder="Enter your password" required >
+                <input type="password" name="password" placeholder="Enter your password" required value="<?php echo $_SESSION['pswd']; ?>">
               </div>
 
               <div class="text">

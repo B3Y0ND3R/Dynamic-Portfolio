@@ -39,7 +39,7 @@ body{
 header{
 
     position: sticky;
-    top: 0; /* Adjust the value according to your design */
+    top: 0; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,8 +65,7 @@ span{
 }
 
 nav{
-    /*display: flex;
-    padding: 100px 10%;*/
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,7 +291,7 @@ nav a:hover span {
 
 
 .btn {
-    /*display: inline-flex;*/
+    
     display: inline-flex;
     justify-content: center !important; 
     align-items: center !important;
@@ -528,7 +527,7 @@ transition: transform 0.5s ease;
 }
 
 .img-about{
-    /*changes here*/
+    
     display: flex;
     align-items: center;
     position: relative;
@@ -956,7 +955,7 @@ transition: transform 0.5s ease;
       display: grid !important;
     grid-template-columns: repeat(1, 1fr) !important;
     gap: 2rem ;
-    align-items: center; /* Center items vertically */
+    align-items: center; 
     justify-content: center;
   
     }
@@ -1258,19 +1257,19 @@ nav a {
 
 @media only screen and (max-width: 320px) {
   .card {
-      min-width: auto; /* Remove the minimum width for smaller screens */
+      min-width: auto; 
   }
 }
 
 @media only screen and (max-width: 600px) {
   .card {
-      min-width: auto; /* Remove the minimum width for smaller screens */
+      min-width: auto; 
   }
 }
 
 @media only screen and (max-width: 768px) {
   .card {
-      min-width: auto; /* Remove the minimum width for smaller screens */
+      min-width: auto; 
   }
 }
 

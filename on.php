@@ -1,5 +1,5 @@
 <?php 
-// session_start();
+ session_start();
 require('db.php');
 if(!isset($_SESSION['isUserLoggedIn'])){
   echo "<script>window.location.href = 'log.php' </script>";
@@ -153,13 +153,13 @@ $resu=mysqli_query($dbcon,"select * from project where id='$p_id'");
 
 $a = mysqli_fetch_array($resu);
 
-// Check if a row was found
+
 if ($a) {
   echo "<img src='images/" . $a['img'] . "' style='width: 200px; height: 200px;'>";
 
     echo "<br/>";
 
-    // Rest of your code for displaying form fields with pre-populated values
+  
 } else {
 
 }

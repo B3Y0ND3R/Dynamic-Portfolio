@@ -1,8 +1,8 @@
-<!-- process_form.php -->
-<?php
-session_start(); // Start or resume the session
 
-// Initialize checkbox states (default to unchecked)
+<?php
+session_start(); 
+
+
 $toggle1State = 1;
 $toggle2State = 1;
 $toggle3State = 1;
@@ -10,9 +10,9 @@ $toggle4State = 1;
 $toggle5State = 1;
 $toggle6State = 1;
 
-// Process form submission
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Update checkbox states in the session
+  
     $_SESSION['toggle1'] = isset($_POST['toggle1']);
     $_SESSION['toggle2'] = isset($_POST['toggle2']);
     $_SESSION['toggle3'] = isset($_POST['toggle3']);
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['toggle5'] = isset($_POST['toggle5']);
     $_SESSION['toggle6'] = isset($_POST['toggle6']);
 
-    // Set individual variables based on checkbox states
+    
     $toggle1State = $_SESSION['toggle1'] ? 1 : 0;
     $toggle2State = $_SESSION['toggle2'] ? 1 : 0;
     $toggle3State = $_SESSION['toggle3'] ? 1 : 0;
@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $toggle5State = $_SESSION['toggle5'] ? 1 : 0;
     $toggle6State = $_SESSION['toggle6'] ? 1 : 0;
 
-    // Add other checkboxes here...
+    
 }
 
-// Verify the current state of checkboxes
+
 echo "Toggle 1 state: " . ($toggle1State ? "checked" : "unchecked") . "<br>";
 echo "Toggle 2 state: " . ($toggle2State ? "checked" : "unchecked") . "<br>";
 echo "Toggle 3 state: " . ($toggle3State ? "checked" : "unchecked") . "<br>";

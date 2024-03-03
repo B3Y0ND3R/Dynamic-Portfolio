@@ -5,11 +5,11 @@ if(!isset($_SESSION['isUserLoggedIn'])){
   echo "<script>window.location.href = 'log.php' </script>";
 }
 
-// Check if the form is submitted for deletion
+
 if(isset($_POST['delete'])) {
     $project_id = mysqli_real_escape_string($dbcon, $_POST['project_id']);
 
-    // Perform deletion query
+  
     $delete_query = "DELETE FROM project WHERE id = '$project_id'";
     mysqli_query($dbcon, $delete_query);
 }
